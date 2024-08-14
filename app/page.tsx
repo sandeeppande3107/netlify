@@ -1,10 +1,17 @@
-'use client'
-import '@mantine/core/styles.css';
+"use client";
+import "@mantine/core/styles.css";
 import styles from "./page.module.css";
-import { createTheme, MantineProvider } from '@mantine/core';
-import { Card, Image, Text, Badge, Button, Group, CardSection } from '@mantine/core';
-import { useEffect, useState } from 'react';
-
+import { createTheme, MantineProvider } from "@mantine/core";
+import {
+  Card,
+  Image,
+  Text,
+  Badge,
+  Button,
+  Group,
+  CardSection,
+} from "@mantine/core";
+import { useEffect, useState } from "react";
 
 const theme = createTheme({
   /** Put your mantine theme override here */
@@ -22,7 +29,7 @@ const query = `
     }
   }
 }
-`
+`;
 
 export default function Home() {
   const [page, setPage] = useState<[] | null>(null);
@@ -56,34 +63,49 @@ export default function Home() {
   return (
     <MantineProvider>
       <main className={styles.main}>
-        {page.map((item: {title: string, description: string, image: {url: string}}, index: number) => {
-          return (
-          <Card shadow="sm" padding="lg" radius="md" withBorder key={index} m={10}>
+        {page.map(
+          (
+            item: {
+              title: string;
+              description: string;
+              image: { url: string };
+            },
+            index: number
+          ) => {
+            return (
+              <Card
+                shadow="sm"
+                padding="lg"
+                radius="md"
+                withBorder
+                key={index}
+                m={10}
+              >
                 <CardSection>
                   <Image
                     src={item.image.url}
                     height={400}
                     alt={item.title}
-                    fit='cover'
+                    fit="cover"
                   />
                 </CardSection>
-        
+
                 <Group justify="space-between" mt="md" mb="xs">
                   <Text fw={500}>{item.title}</Text>
                 </Group>
-        
+
                 <Text size="sm" c="dimmed">
                   {item.description}
                 </Text>
-        
+
                 <Button color="blue" fullWidth mt="md" radius="md">
                   Book classic tour now
                 </Button>
-              </Card>)
-        })}
-       
+              </Card>
+            );
+          }
+        )}
       </main>
     </MantineProvider>
-    
   );
 }
