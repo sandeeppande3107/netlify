@@ -22,3 +22,4 @@
   for = "/*"
   [headers.values]
     Vary = "query=item_id"
+    Netlify-Vary: cookie=ab_test
