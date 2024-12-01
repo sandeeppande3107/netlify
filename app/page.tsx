@@ -63,6 +63,7 @@ export default function Home() {
   return (
     <MantineProvider>
       <main className={styles.main}>
+        New Change
         {page.map(
           (
             item: {
