@@ -21,4 +21,4 @@
   [[headers]]
   for = "/*"
   [headers.values]
-    Vary = query=item_id
+    Vary = "query=item_id"
