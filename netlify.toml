@@ -20,8 +20,9 @@
   #  publish = "dist" # Folder with the static content for _redirect file
 
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
-  [[headers]]
+[[headers]]
   for = "/*"
   [headers.values]
-    Vary = "query=item_id"
-    Netlify-Vary = "cookie=ab_test"
+  Vary = "query=item_id"
+  Netlify-Vary = "cookie=ab_test"
+  custom-header="a"
