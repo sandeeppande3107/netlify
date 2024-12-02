@@ -23,6 +23,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-  Vary = "query=item_id"
-  Netlify-Vary = "cookie=ab_test"
-  custom-header="a"
+  Custom-Header="a"
