@@ -23,6 +23,19 @@ const nextConfig = {
               }
             ],
           },
+          {
+            source: '/server',
+            headers: [
+              {
+                key: 'x-another-custom-header-server',
+                value: 'my other custom header value',
+              },
+              {
+                key: 'netlify-vary',
+                value: 'query'
+              }
+            ],
+          },
         ]
       },
 };

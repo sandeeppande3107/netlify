@@ -92,7 +92,7 @@ export default function Home() {
                 </CardSection>
 
                 <Group justify="space-between" mt="md" mb="xs">
-                  <Text fw={500}>{item.title}</Text>
+                  <h2>{item.title}</h2>
                 </Group>
 
                 <Text size="sm" c="dimmed">
